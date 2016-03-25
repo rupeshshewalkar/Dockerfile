@@ -40,9 +40,7 @@ However you can run different distros of Linux because they do share the same ke
  
 ##Docker Installation
 
- 	docker version
- 	
- 	docker images : show all available repo/images
+	docker version : version information 
  	
  	docker images : show all available repo/images
         
@@ -60,8 +58,8 @@ However you can run different distros of Linux because they do share the same ke
 
  
 ##Packaging A Customized Container
-
-        docker ps -a : process running under container
+	
+	docker ps -a : process running under container
  	
  	docker commit -m=" Add a ruby json module using gem" -a=" Linux academy" <<container_id>> <<image_name>> : used to make your own image -a is author name -m is for message
 
