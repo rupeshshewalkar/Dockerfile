@@ -1,11 +1,11 @@
-Introduction to Docker
+##Introduction to Docker
 
  1)Docker is tool used to packing application with its software dependencies in virtual container
  2)Docker can run linux, windows & Mac
  3)Docker used in lot of cases like build management,configuration management,rapid deployment, Application isolation etc
  4)Docker offers you the ability to isolate your application,standardize your build & deployment process
  
-Containers Vs. Virtual Machines
+##Containers Vs. Virtual Machines
 
 Virtual Machines : 
                   1)Virtual Machine allows you to set up one operating system within another
@@ -30,19 +30,19 @@ Limitation
 		All containers share same kernel. This is why containers are light weight. Also unlike VM, you don't have to pre-allocate significant chunk of memory to VM because we are not running new copy of OS. 
 		This enables to run thousands of containers on one OS while sandboxing them which might not be possible to do if we were running separate copy of OS in its own VM.
 
-Docker Architecture
+##Docker Architecture
 
  Docker clients & daemons communicate via sockets or through a RESTful API (http in xml format)
 
  
-Docker Installation
+##Docker Installation
 
  docker version
  docker images : show all available repo/images
  docker images : show all available repo/images
  docker search <<image_search>> : will search image in docker hub
 
-Creating Our First Image
+##Creating Our First Image
 
  docker info : all information about current installation docker include images details, partation details etc
  docker pull <<image_need_install>>: used to pull image from docker hub
@@ -50,73 +50,73 @@ Creating Our First Image
  docker run -i -t <<image_name>> /bin/bash : interactive shell from docker container
 
  
-Packaging A Customized Container
+##Packaging A Customized Container
 
  docker ps -a : process running under container
  docker commit -m=" Add a ruby json module using gem" -a=" Linux academy" <<container_id>> <<image_name>> : used to make your own image -a is author name -m is for message
 
  
- Running Container Commands With Docker
+##Running Container Commands With Docker
 
  docker run <<image_name>> /bin/echo 'hello from your Docker Container!''
  docker run -d ubuntu:latest /bin/bash -c "while true; do echo DockerMAN; sleep 1;done"
  docker log : display all log of specific container
  docker stop : used to stop container
 
- Exposing Our Container With Port Redirects
+## Exposing Our Container With Port Redirects
 
  docker run -d -p 8080:80 <<name_baseimage>>
  
-Attach to a Running Container
+##Attach to a Running Container
 
  docker attach << container_name OR ID>>
  docker is process oriented
 
- Removing Images
+## Removing Images
 
  docker rm << container name or ID>> : remove container
  docker rmi : used to remove images
 
- Directory Structure
+## Directory Structure
 
  cat repositories-devicemapper | python -mjson.tool
 
- Pushing Images to Docker Hub
+## Pushing Images to Docker Hub
 
  docker push username/baseOSname:label : used to push image in hub
 
- Image Volume Management
+## Image Volume Management
 
  docker run -i -t -v /myapp container_name or ID /bin/bash
 
- Advanced Container Network Management
+## Advanced Container Network Management
 
  ip link add br10 type bridge
  ip addr add 10.10.100.1/24 dev br10
  ip link set br10 up
 
- Interactive Shell Control
+## Interactive Shell Control
 
  docker exec -i -t <<container_Name>> /usr/bin/top :used to run inside process/service
 
- Previous Container Management
+## Previous Container Management
 
  docker rm `docker ps -a`
 
- Sharing Container Resources
+## Sharing Container Resources
 
  docker run -d -i -t -v /data --name DATA1 centos:centos6 /bin
  doker run -d -i -t --volume-from data1 --name data2 centos:centos6 /bin/bash
 
- Committing a Running Container (Snapshot Images)
+## Committing a Running Container (Snapshot Images)
 
  docker commit <<container_name>> centos6:which
 
- Optimizing Our Dockerfile Builds
+## Optimizing Our Dockerfile Builds
 
  docker image -t : will give how container build & how much sub container used to build
 
- Five Useful Docker CLI Commands
+## Five Useful Docker CLI Commands
 
  docker cp <<container_name>>:/etc/yum.conf /tmp : used to copy some file from container to base image location
  
@@ -130,7 +130,7 @@ Attach to a Running Container
  
  docker exec : used to run any command running container
 
- More Useful Docker CLI Commands
+## More Useful Docker CLI Commands
 
  docker info : all information docker system(Kernel,Ram,Partition..etc)
  docker top <<container_ID/Name>> : top process running inside container
