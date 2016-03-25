@@ -37,10 +37,10 @@ Limitation
  
 ##Docker Installation
 
- docker version
- docker images : show all available repo/images
- docker images : show all available repo/images
- docker search <<image_search>> : will search image in docker hub
+ 	docker version
+ 	docker images : show all available repo/images
+ 	docker images : show all available repo/images
+        docker search <<image_search>> : will search image in docker hub
 
 ##Creating Our First Image
 
