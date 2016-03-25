@@ -1,8 +1,11 @@
 ##Introduction to Docker
 
  1)Docker is tool used to packing application with its software dependencies in virtual container
+ 
  2)Docker can run linux, windows & Mac
+ 
  3)Docker used in lot of cases like build management,configuration management,rapid deployment, Application isolation etc
+ 
  4)Docker offers you the ability to isolate your application,standardize your build & deployment process
  
 ##Containers Vs. Virtual Machines
