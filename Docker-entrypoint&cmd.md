@@ -22,11 +22,13 @@ However note that, the CMD used at end of the ” #docker run … .. ” will ov
 ###You have three variables: ENTRYPOINT, CMD and CONTAINERARGS
 
 
+
 **Rule #1: Existing CONTAINERARGS replace CMD**
 
 **Rule #2: If ENTRYPOINT exists, the string “ENTRYPOINT CMD” will be executed – If ENTRYPOINT does not exist, the**
 
 **string “CMD” will be executed. – If CMD does not exist but ENTRYPOINT, string “ENTRYPOINT” will be executed.**
+
 
 
 
