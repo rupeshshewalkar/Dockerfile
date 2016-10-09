@@ -62,7 +62,7 @@ The isolation happens because kernel knows the namespace that was assigned to th
        $ sudo wget -qO- https://get.docker.com/ | sh
     
     
-    **For Windows & OS x**
+   **For Windows & OS x**
      
       We can use boot2loader or Docker toolbox ( which content Virtual, Docker Engine,Docker compose & other docker utility) 
     
