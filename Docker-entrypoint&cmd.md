@@ -16,3 +16,34 @@ The above instruction basically make it something like “netstat -tulpn” for 
 Also there is a default entrypoint for each container which is nothing but “/bin/sh -c”
 
 However note that, the CMD used at end of the ” #docker run … .. ” will overwrite the default command
+
+
+
+###You have three variables: ENTRYPOINT, CMD and CONTAINERARGS
+
+
+**Rule #1: Existing CONTAINERARGS replace CMD**
+
+**Rule #2: If ENTRYPOINT exists, the string “ENTRYPOINT CMD” will be executed – If ENTRYPOINT does not exist, the**
+
+**string “CMD” will be executed. – If CMD does not exist but ENTRYPOINT, string “ENTRYPOINT” will be executed.**
+
+
+
+###In other other other words:
+
+      ENTRYPOINT + CMD => exec $($ENTRYPOINT $CMD)
+
+      CMD => exec $($CMD)
+
+      ENTRYPOINT + CMD + CONTAINERARGS => exec $($ENTRYPOINT $CONTAINERARGS)
+
+      CMD + CONTAINERARGS => exec $($CONTAINERARGS)
+
+      ENTRYPOINT + CONTAINERARGS => exec $($ENTRYPOINT $CONTAINERARGS)
+
+      ENTRYPOINT => exec $($ENTRYPOINT)
+
+      CONTAINERARGS => exec $($CONTAINERARGS)
+
+      NOTHING => exec NOTHING
