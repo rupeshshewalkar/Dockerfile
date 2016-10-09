@@ -20,7 +20,7 @@ Each guest OS goes through all the process of bootstrapping, loading kernel etc.
 
 You can have very tight security, for example, guest OS can't get full access to host OS or other guests and mess things up.
 		    
-Containers :                  
+## Containers :              
  
  containers one of the function of OS is to allow sharing of global resources like network and disk to processes.
 What if these global resources were wrapped in namespaces so that they are visible only to those processes that runs in the same namespace? Say, you can get a chunk of disk and put that in namespace X and then processes running in namespace Y can't see or access it. Similarly, processes in namespace X can't access anything in memory that is allocated to namespace Y. Of course, processes in X can't see or talk to processes in namespace Y. This provides kind of virtualization and isolation for global resources. 
@@ -28,13 +28,16 @@ This is how docker works: Each container runs in its own namespace but uses exac
 The isolation happens because kernel knows the namespace that was assigned to the process and during API calls it makes sure that process can only access resources in its own namespace.
             
             
-            
-Limitation 
+## Limitation
 
-  The limitations of containers vs VM should be obvious now: You can't run completely different OS in containers like in VMs. 
-However you can run different distros of Linux because they do share the same kernel. The isolation level is not as strong as in VM. In fact, there was a way for "guest" container to take over host in early implementations. 
-  Also you can see that when you load new container, the entire new copy of OS doesn't start like it does in VM.All containers share same kernel. This is why containers are light weight. Also unlike VM, you don't have to pre-allocate significant chunk of memory to VM because we are not running new copy of OS. 
- This enables to run thousands of containers on one OS while sandboxing them which might not be possible to do if we were running separate copy of OS in its own VM.
+  The limitations of containers vs VM should be obvious now:
+  
+  1)You can't run completely different OS in containers like in VMs. 
+
+ 2) However you can run different distros of Linux because they do share the same kernel. The isolation level is not 	 as strong as in VM. In fact, there was a way for "guest" container to take over host in early implementations. 
+    Also you can see that when you load new container, the entire new copy of OS doesn't start like it does in 			VM.All containers share same kernel. This is why containers are light weight. Also unlike VM, you don't have to 	pre-allocate significant chunk of memory to VM because we are not running new copy of OS. 
+ 	This enables to run thousands of containers on one OS while sandboxing them which might not be possible to do if 	 we were running separate copy of OS in its own VM.
+
 
 ##Docker Architecture
 
@@ -43,11 +46,21 @@ However you can run different distros of Linux because they do share the same ke
  
 ##Docker Installation
 
-	docker version : version information 
+	docker can be install on Centos/Ubuntu using there software repositary 
+    
+    For Centos7 
+    
+     $ sudo yum update
+	 $ sudo yum -y install docker
+	 $ sudo systemctl start docker
+    
+    docker version : version information 
  	
  	docker images : show all available repo/images
         
     docker search <<image_search>> : will search image in docker hub
+    
+    
 
 ##Creating Our First Image
 
