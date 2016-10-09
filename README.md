@@ -13,8 +13,11 @@
 Virtual Machines :                  
 
 1)Virtual Machine allows you to set up one operating system within another
-2)Virtualization allows you to run two completely different OS on same hardware. 	            
+
+2)Virtualization allows you to run two completely different OS on same hardware. 
+
 Each guest OS goes through all the process of bootstrapping, loading kernel etc. 
+
 You can have very tight security, for example, guest OS can't get full access to host OS or other guests and mess things up.
 		    
 Containers :                  
@@ -44,7 +47,7 @@ However you can run different distros of Linux because they do share the same ke
  	
  	docker images : show all available repo/images
         
-        docker search <<image_search>> : will search image in docker hub
+    docker search <<image_search>> : will search image in docker hub
 
 ##Creating Our First Image
 
@@ -61,7 +64,7 @@ However you can run different distros of Linux because they do share the same ke
 	
 	docker ps -a : process running under container
  	
- 	docker commit -m=" Add a ruby json module using gem" -a=" Linux academy" <<container_id>> <<image_name>> : used to make your own image -a is author name -m is for message
+ 	docker commit -m=" Add a ruby json module using gem" -a=" Linux academy" <<container_id>> <<image_name>> : used 	to make your own image -a is author name -m is for message
 
  
 ##Running Container Commands With Docker
