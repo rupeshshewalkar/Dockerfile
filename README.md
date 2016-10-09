@@ -53,12 +53,25 @@ The isolation happens because kernel knows the namespace that was assigned to th
      $ sudo yum update
 	 $ sudo yum -y install docker
 	 $ sudo systemctl start docker
+     
+     
+     For Ubuntu 14.04
+     
+     $ sudo apt-get update
+	 $ sudo apt-get install -y wget
+	 $ sudo wget -qO- https://get.docker.com/ | sh
+    
+    
+    For Windows & OS x
+     
+    We can use boot2loader or Docker toolbox ( which content Virtual, Docker Engine,Docker compose & other docker   utility 
+    
     
     docker version : version information 
  	
  	docker images : show all available repo/images
         
-    docker search <<image_search>> : will search image in docker hub
+    docker search image_search : will search image in docker hub
     
     
 
