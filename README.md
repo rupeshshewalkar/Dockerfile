@@ -48,35 +48,35 @@ The isolation happens because kernel knows the namespace that was assigned to th
 
 	docker can be install on Centos/Ubuntu using there software repositary 
     
-    **For Centos7**
+   **For Centos7**
     
-     $ sudo yum update
-	 $ sudo yum -y install docker
-	 $ sudo systemctl start docker
+       $ sudo yum update
+       $ sudo yum -y install docker
+       $ sudo systemctl start docker
      
      
-     **For Ubuntu 14.04**
+   **For Ubuntu 14.04**
      
-     $ sudo apt-get update
-	 $ sudo apt-get install -y wget
-	 $ sudo wget -qO- https://get.docker.com/ | sh
+       $ sudo apt-get update
+       $ sudo apt-get install -y wget
+       $ sudo wget -qO- https://get.docker.com/ | sh
     
     
     **For Windows & OS x**
      
-    We can use boot2loader or Docker toolbox ( which content Virtual, Docker Engine,Docker compose & other docker utility) 
+      We can use boot2loader or Docker toolbox ( which content Virtual, Docker Engine,Docker compose & other docker utility) 
     
    **For Cloud environment ( Aws,Azure,google etc)**
     
-    Docker machine help to setup docker in cloud environment 
+      Docker machine help to setup docker in cloud environment 
     
        
     
-    docker version : version information 
- 	
- 	docker images : show all available repo/images
-        
-    docker search image_search : will search image in docker hub
+      docker version : version information 
+
+      docker images : show all available repo/images
+
+      docker search image_search : will search image in docker hub
     
     
 
