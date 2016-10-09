@@ -108,7 +108,13 @@ The isolation happens because kernel knows the namespace that was assigned to th
 ## Exposing Our Container With Port Redirects
 
  	docker run -d -p 8080:80 <<name_baseimage>>
- 
+    
+
+## Link two docker containers
+
+	docker run --name mysqlwp -e MYSQL_ROOT_PASSWORD=wordpressdocker -d mysql
+    docker run --name wordpress --link mysqlwp:mysql -p 80:80 -d wordpress
+
 ##Attach to a Running Container
 
  	docker attach << container_name OR ID>>
