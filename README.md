@@ -64,11 +64,11 @@ The isolation happens because kernel knows the namespace that was assigned to th
     
    **For Windows & OS x**
      
-      We can use boot2loader or Docker toolbox ( which content Virtual, Docker Engine,Docker compose & other docker utility) 
+        We can use boot2loader or Docker toolbox ( which content Virtual, Docker Engine,Docker compose & other docker utility) 
     
    **For Cloud environment ( Aws,Azure,google etc)**
     
-      Docker machine help to setup docker in cloud environment 
+        Docker machine help to setup docker in cloud environment 
     
        
     
